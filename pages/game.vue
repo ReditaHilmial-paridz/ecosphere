@@ -13,12 +13,12 @@
         <!-- Game 1 -->
         <div class="game-card" @click="openGame('https://poki.com/id/g/ecosystem')">
           <div class="game-badge" style="background-color: #2ecc71;">Edukasi!</div>
-          <div class="game-image" style="background-image: url('https://cdn.pixabay.com/photo/2020/06/25/09/34/eco-5338714_1280.jpg');"></div>
+          <div class="game-image" style="background-image: url('/assets/pilah_pintar.png');"></div>
           <div class="game-content">
-            <h3>Petualangan Ekosistem</h3>
+            <h3>Pilah Pintar</h3>
             <p>Jelajahi berbagai ekosistem dan pelajari keseimbangan alam!</p>
             <div class="game-stats">
-              <span>⭐ 4.7/5</span>
+              <span>⭐ 4.9/5</span>
               <span>🌿 Edukasi</span>
             </div>
           </div>
@@ -33,7 +33,7 @@
             <h3>Ahli Daur Ulang</h3>
             <p>Jadilah master daur ulang dan selamatkan bumi!</p>
             <div class="game-stats">
-              <span>⭐ 4.5/5</span>
+              <span>⭐ 4.9/5</span>
               <span>♻️ Aksi</span>
             </div>
           </div>
@@ -48,7 +48,7 @@
             <h3>Pembersih Samudra</h3>
             <p>Bersihkan laut dari sampah dan selamatkan kehidupan laut!</p>
             <div class="game-stats">
-              <span>⭐ 4.8/5</span>
+              <span>⭐ 4.9/5</span>
               <span>🐠 Petualangan</span>
             </div>
           </div>

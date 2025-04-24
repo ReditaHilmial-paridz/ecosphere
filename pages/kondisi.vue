@@ -61,13 +61,15 @@
           </div>
         </div>
 
-        <div class="hourly-forecast" v-if="hourlyForecast.length > 0">
-          <h3>Perkiraan per Jam</h3>
+        <div class="hourly-forecast">
+          <h3>Perkiraan per 2 Jam (24 Jam ke Depan)</h3>
           <div class="hourly-scroll">
             <div class="hour-item" v-for="(hour, index) in hourlyForecast" :key="index">
               <div class="hour-time">{{ hour.time }}</div>
               <img :src="getWeatherIcon(hour.temp, hour.description)" class="hour-icon" alt="Hourly weather">
               <div class="hour-temp">{{ hour.temp }}°</div>
+              <div class="hour-pop" v-if="hour.pop > 0">💧{{ Math.round(hour.pop * 100) }}%</div>
+              <div class="hour-pop" v-else>&nbsp;</div>
             </div>
           </div>
         </div>
@@ -347,12 +349,14 @@ export default {
       }
     },
     processHourlyForecast(forecastData) {
-      this.hourlyForecast = forecastData.list.slice(0, 8).map(item => {
+      // Ambil data per jam untuk 24 jam ke depan
+      this.hourlyForecast = forecastData.list.slice(0, 24).map(item => {
         const date = new Date(item.dt * 1000)
         return {
           time: this.formatHour(date),
           temp: Math.round(item.main.temp),
-          description: item.weather[0].description
+          description: item.weather[0].description,
+          pop: item.pop || 0 // Probability of precipitation
         }
       })
     },
@@ -361,12 +365,15 @@ export default {
       const now = new Date()
       const currentHour = now.getHours()
       
-      for (let i = 0; i < 8; i++) {
+      for (let i = 0; i < 24; i++) {
         const hour = (currentHour + i) % 24
+        const randTemp = 28 + Math.floor(Math.random() * 5) - 2
+        const randWeather = ['cerah', 'berawan', 'cerah berawan', 'hujan ringan'][Math.floor(Math.random() * 4)]
         hours.push({
           time: `${hour}:00`,
-          temp: 28 + Math.floor(Math.random() * 5) - 2,
-          description: ['cerah', 'berawan', 'cerah berawan', 'hujan ringan'][Math.floor(Math.random() * 4)]
+          temp: randTemp,
+          description: randWeather,
+          pop: randWeather.includes('hujan') ? Math.random() * 0.8 + 0.2 : 0
         })
       }
       
@@ -424,6 +431,8 @@ export default {
     },
     refreshData() {
       this.getLocationAndFetch()
+      this.currentFunFact = this.getRandomFunFact()
+      this.currentAirCareTip = this.getRandomAirCareTip()
     },
   }
 }
@@ -616,8 +625,11 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 60px;
+  min-width: 70px;
   flex-shrink: 0;
+  padding: 5px;
+  background: rgba(236, 240, 241, 0.3);
+  border-radius: 8px;
 }
 
 .hour-time {
@@ -636,6 +648,12 @@ export default {
   font-weight: bold;
   color: #2c3e50;
   font-size: clamp(0.9rem, 2.5vw, 1rem);
+  margin-bottom: 3px;
+}
+
+.hour-pop {
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  color: #3498db;
 }
 
 /* Air Quality Panel */
@@ -945,6 +963,10 @@ export default {
   
   .app-header {
     padding: 15px;
+  }
+  
+  .hour-item {
+    min-width: 60px;
   }
 }
 </style>

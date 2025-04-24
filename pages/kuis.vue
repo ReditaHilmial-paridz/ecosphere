@@ -15,11 +15,11 @@
           Kuis Penyelamat Bumi 🌱
         </h1>
         <p class="text-lg sm:text-xl text-gray-700">
-          Uji pengetahuanmu tentang lingkungan dan dapatkan hadiah virtual!
+          Uji pengetahuanmu tentang lingkungan!
         </p>
         <div class="mt-4 sm:mt-6 flex justify-center">
           <div class="badge badge-lg badge-primary gap-2 animate-pulse">
-            ✨ 100 Poin untuk pemenang!
+            ✨ jawab pertanyaan dibawah ini untuk jadi pemenang!
           </div>
         </div>
       </div>
