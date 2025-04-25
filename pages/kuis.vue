@@ -19,7 +19,7 @@
         </p>
         <div class="mt-4 sm:mt-6 flex justify-center">
           <div class="badge badge-lg badge-primary gap-2 animate-pulse">
-            ✨ jawab pertanyaan dibawah ini!
+            ✨ jawab pertanyaan dibawah ini untuk jadi pemenang!
           </div>
         </div>
       </div>

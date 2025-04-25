@@ -16,7 +16,7 @@
           <div class="game-image" style="background-image: url('/assets/pilah_pintar.png');"></div>
           <div class="game-content">
             <h3>Pilah Pintar</h3>
-            <p>Jelajahi berbagai ekosistem dan pelajari keseimbangan alam!</p>
+            <p>Jadilah orang yangh pandai memilah dan memilih tempat sampah!</p>
             <div class="game-stats">
               <span>⭐ 4.9/5</span>
               <span>🌿 Edukasi</span>
@@ -28,10 +28,10 @@
         <!-- Game 2 -->
         <div class="game-card" @click="openGame('https://poki.com/id/g/recycle-master')">
           <div class="game-badge" style="background-color: #3498db;">Keren!</div>
-          <div class="game-image" style="background-image: url('https://cdn.pixabay.com/photo/2017/09/08/18/20/recycling-2729608_1280.jpg');"></div>
+          <div class="game-image" style="background-image: url('/assets/katahijau.png');"></div>
           <div class="game-content">
-            <h3>Ahli Daur Ulang</h3>
-            <p>Jadilah master daur ulang dan selamatkan bumi!</p>
+            <h3>Kata Hijau</h3>
+            <p>merangkai kata!</p>
             <div class="game-stats">
               <span>⭐ 4.9/5</span>
               <span>♻️ Aksi</span>
@@ -43,10 +43,10 @@
         <!-- Game 3 -->
         <div class="game-card" @click="openGame('https://poki.com/id/g/ocean-cleanup')">
           <div class="game-badge" style="background-color: #f39c12;">Seru!</div>
-          <div class="game-image" style="background-image: url('https://cdn.pixabay.com/photo/2020/04/12/01/58/ocean-5032386_1280.jpg');"></div>
+          <div class="game-image" style="background-image: url('/assets/oktaventure.png');"></div>
           <div class="game-content">
-            <h3>Pembersih Samudra</h3>
-            <p>Bersihkan laut dari sampah dan selamatkan kehidupan laut!</p>
+            <h3>oktaventure AR</h3>
+            <p>marilah kita mengenal nama nama hewan!</p>
             <div class="game-stats">
               <span>⭐ 4.9/5</span>
               <span>🐠 Petualangan</span>
