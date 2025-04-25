@@ -16,7 +16,7 @@
           <div class="game-image" style="background-image: url('/assets/pilah_pintar.png');"></div>
           <div class="game-content">
             <h3>Pilah Pintar</h3>
-            <p>Jadilah orang yangh pandai memilah dan memilih tempat sampah!</p>
+            <p>Jadilah orang yang pandai memilah dan memilih tempat sampah!</p>
             <div class="game-stats">
               <span>⭐ 4.9/5</span>
               <span>🌿 Edukasi</span>
